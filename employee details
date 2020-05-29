@@ -1,1 +1,45 @@
-
+#include <stdio.h>
+ 
+/*structure declaration*/
+struct employee{
+    char    name[30];
+    int     empId;
+    int     empage;
+    float   salary;
+};
+ 
+int main()
+{
+    /*declare structure variable*/
+    struct employee emp[25];
+    int a,b;
+     
+    /*read employee details*/
+    printf("\nEnter details :\n");
+    for(a= 0; a <= 20; a++)
+  	{printf( "\n %d ).\n",a+1);
+  	printf("ID :");            
+	 scanf("%d",&emp[a].empId);
+     printf("Name :");          
+	 scanf("%s",&emp[a].name);
+     printf("Age :");            
+	 scanf("%d",&emp[a].empage);
+     printf("Salary :");        
+	 scanf("%f",&emp[a].salary);
+    
+  	}
+    printf("\nEntered detail is:");
+    printf("Id:        \t" );
+    printf("Name:      \t");
+    printf("Age:       \t" );
+    printf("Salary:    \t\n");
+    /*print employee details*/
+     for(b= 0; b <=20; b++)
+    {
+    printf("%d\t"     ,emp[b].empId);
+    printf("%s\t"   ,emp[b].name);
+    printf("%d\t"     ,emp[b].empage);
+    printf("%f\t\n",emp[b].salary);
+	}
+    return 0;
+}
